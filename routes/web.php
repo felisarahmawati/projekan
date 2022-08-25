@@ -715,6 +715,13 @@ Route::get('Vendor/Kelola-PickUp/setelah_input', function () {
         ]);
     });
 
+//profile vendor
+Route::get('user/profilevendor', function () {
+    return view('user/profilevendor', [
+        "title" =>"Profile Vendor"
+    ]);
+});
+
 
 //Finance
 Route::get('/finance/page', [FinanceController::class, 'index'])->middleware('role:finance')->name('finance.index');

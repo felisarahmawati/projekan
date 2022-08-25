@@ -29,8 +29,10 @@
 
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
                         <div class="icon-box">
-                            <div class="img mb-3"><img src="{{ asset('assets/img/icon_bangunann.png') }}" alt="..."></div>
-                                <h4 class="title"><a href="/user/kategori/bangunan/apartemen">Rumah</a></h4>
+                            <div class="img mb-3">
+                                <a href="/user/subkategori/bangunan/apartement"><img src="{{ asset('assets/img/icon_bangunann.png') }}" alt="...">
+                            </div>
+                            <h4 class="title"><a href="/user/subkategori/bangunan/apartement">Bangunan</a></h4>
                                 <b>
                                     <p class="description">{{ $data['judul1'] }}</p>
                                 </b>
@@ -40,15 +42,16 @@
                                 <p class="description">- Rumah dibersihkan</p>
                                 <p class="description">- Konsultasi & Support</p>
                                 <p class="description">- Keamanan terjaga</p>
-
-                                <!-- <a href="#services" class="btn btn-primary" style="margin-top: 10px; background:#00B56A;">Pilih Paket</a> -->
                         </div>
+                                <!-- <a href="#services" class="btn btn-primary" style="margin-top: 10px; background:#00B56A;">Pilih Paket</a> -->
                     </div>
 
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
                         <div class="icon-box">
-                                <div class="img mb-3"><img src="{{ asset('assets/img/icon_barang.png') }}" alt="..."></div>
-                                    <h4 class="title"><a href="/user/kategori/barang/paket">Barang</a></h4>
+                                <div class="img mb-3">
+                                    <a href="/user/subkategori/barang/perpaket"><img src="{{ asset('assets/img/icon_barang.png') }}" alt="..."></a>
+                                </div>
+                                    <h4 class="title"><a href="/user/subkategori/barang/perpaket">Barang</a></h4>
                                     <b>
                                         <p class="description">{{ $data['judul1'] }}</p>
                                     </b>
