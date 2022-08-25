@@ -585,6 +585,136 @@ Route::get('Vendor/Kelola-PickUp/setelah_input', function () {
     ]);
 });
 
+//Route subkategori layanan
+
+    //kendaraan
+    Route::get('user/subkategori/kendaraan/golongan1', function () {
+        return view('user/subkategori/kendaraan/golongan1', [
+            "title" =>" Golongan 1"
+        ]);
+    });
+
+    Route::get('user/subkategori/kendaraan/golongan2', function () {
+        return view('user/subkategori/kendaraan/golongan2', [
+            "title" =>" Golongan 1"
+        ]);
+    });
+
+    Route::get('user/subkategori/kendaraan/golongan3', function () {
+        return view('user/subkategori/kendaraan/golongan3', [
+            "title" =>" Golongan 1"
+        ]);
+    });
+
+    Route::get('user/subkategori/kendaraan/golongan4', function () {
+        return view('user/subkategori/kendaraan/golongan4', [
+            "title" =>" Golongan 1"
+        ]);
+    });
+
+    Route::get('user/subkategori/kendaraan/golongan5', function () {
+        return view('user/subkategori/kendaraan/golongan5', [
+            "title" =>" Golongan 1"
+        ]);
+    });
+
+    //detail kendaraan
+    Route::get('user/subkategori/kendaraan/detail_kendaraan', function () {
+        return view('user/subkategori/kendaraan/detail_kendaraan', [
+            "title" =>" Detail kendaraan"
+        ]);
+    });
+
+    //barang
+    Route::get('user/subkategori/barang/perpaket', function () {
+        return view('user/subkategori/barang/perpaket', [
+            "title" =>" Golongan 1"
+        ]);
+    });
+
+    Route::get('user/subkategori/barang/perbarang', function () {
+        return view('user/subkategori/barang/perbarang', [
+            "title" =>" Golongan 1"
+        ]);
+    });
+
+    //detail barang dan paket
+    Route::get('user/subkategori/barang/detail_barang', function () {
+        return view('user/subkategori/barang/detail_barang', [
+            "title" =>" Detail barang"
+        ]);
+    });
+
+    Route::get('user/subkategori/barang/detail_paket', function () {
+        return view('user/subkategori/barang/detail_paket', [
+            "title" =>" Detail paket"
+        ]);
+    });
+
+    //bangunan
+    Route::get('user/subkategori/bangunan/apartement', function () {
+        return view('user/subkategori/bangunan/apartement', [
+            "title" =>" Golongan 1"
+        ]);
+    });
+    Route::get('user/subkategori/bangunan/kost', function () {
+        return view('user/subkategori/bangunan/kost', [
+            "title" =>" Golongan 1"
+        ]);
+    });
+    Route::get('user/subkategori/bangunan/rumah', function () {
+        return view('user/subkategori/bangunan/rumah', [
+            "title" =>" Golongan 1"
+        ]);
+    });
+    Route::get('user/subkategori/bangunan/rumahsusun', function () {
+        return view('user/subkategori/bangunan/rumahsusun', [
+            "title" =>" Golongan 1"
+        ]);
+    });
+
+    Route::get('user/subkategori/bangunan/kontrakan', function () {
+        return view('user/subkategori/bangunan/kontrakan', [
+            "title" =>" Golongan 1"
+        ]);
+    });
+
+    //detail bangunan
+    Route::get('user/subkategori/bangunan/detail_bangunan', function () {
+        return view('user/subkategori/bangunan/detail_bangunan', [
+            "title" =>" Detail bangunan"
+        ]);
+    });
+
+    //wishlist
+    Route::get('user/wishlist', function () {
+        return view('user/wishlist', [
+            "title" =>"Wishtlist"
+        ]);
+    });
+
+    //pemesanan layanan
+    Route::get('user/pemesanan/pesanan/pesanan_kendaraan', function () {
+        return view('user/pemesanan/pesanan/pesanan_kendaraan', [
+            "title" =>"Pesanan kendaraan"
+        ]);
+    });
+    Route::get('user/pemesanan/pesanan/pesanan_bangunan', function () {
+        return view('user/pemesanan/pesanan/pesanan_bangunan', [
+            "title" =>"Pesanan bangunan"
+        ]);
+    });
+    Route::get('user/pemesanan/pesanan/pesanan_paket', function () {
+        return view('user/pemesanan/pesanan/pesanan_paket', [
+            "title" =>"Pesanan paket"
+        ]);
+    });
+    Route::get('user/pemesanan/pesanan/pesanan_barang', function () {
+        return view('user/pemesanan/pesanan/pesanan_barang', [
+            "title" =>"Pesanan barang"
+        ]);
+    });
+
 
 //Finance
 Route::get('/finance/page', [FinanceController::class, 'index'])->middleware('role:finance')->name('finance.index');
