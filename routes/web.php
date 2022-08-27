@@ -253,7 +253,16 @@ Route::get('/superadmin/setting/tambah', function () {
 Route::get('/vendor/homelagi', [VendorController::class, 'index'])->middleware('role:vendor')->name('vendor.index');
 Route::get('/orderan_baru', static fn () => view('Vendor/order/kendaraan/orderan_baru'));
 Route::get('/rincian_baru', static fn () => view('Vendor/order/kendaraan/rincian_baru'));
-
+Route::get('/vendor/dashboard', function () {
+return view('/vendor/dashboard',[
+    "title" => "vendor"
+]);
+});
+Route::get('vendor/pemasukan', function () {
+return view('vendor/pemasukan', [
+    "title" =>"pemasukan"
+]);
+});
 // --profile Vendor--
 
 Route::get('Vendor/Profile/profile_vendor', function () {
@@ -367,6 +376,23 @@ Route::get('/history_pickup', static fn () => view('Vendor/history/pickup/histor
 Route::get('Vendor/Kelola-Kendaraan/kelola_kendaraan', function () {
     return view('Vendor/Kelola-Kendaraan/kelola_kendaraan', [
         "title" =>"Kelola_kendaraan"
+    ]);
+});
+
+Route::get('vendor/penarikan', function () {
+    return view('vendor/penarikan', [
+        "title" =>"penarikan"
+    ]);
+});
+
+Route::get('vendor/saldo', function () {
+    return view('vendor/saldo', [
+        "title" =>"saldo"
+    ]);
+});
+Route::get('vendor/tarikdana', function () {
+    return view('vendor/tarikdana', [
+        "title" =>"tarikdana"
     ]);
 });
 
