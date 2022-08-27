@@ -1,9 +1,17 @@
-@extends('layouts.vendor')
+@extends('layouts.dashboard_vendor')
 
 <!--hero section-->
 @section('container')
-<section class="align-items-center services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
-        
+<section class="home-section"  >
+    <div class="main">
+        <div class="topbar">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="cardHeader-title">
+                <h2>Pesanan</h2>
+            </div>
+        </div>    
         <div class="">
             <div class="cardBox1">
                 <div class="card1">
@@ -43,8 +51,8 @@
             </div>
         </div>
 
-        <div class="row justify-content-center m-auto">
-            <div class="col-md-9">
+        <div class="row container">
+            <div class="col-md-11">
                 <div class="card" style="background-color: #fff;">
                     <div class="container">
                         <div class="row">
@@ -52,7 +60,7 @@
                                 <h3><b>Today</b></h3>
                             </div>
                         </div>
-                            <div class="card-body justify-content-center" style="margin-top: 10px; width:70%; margin:auto">
+                            <div class="card-body justify-content-center" style="margin-top: 10px; width:80%; margin:auto">
                                 <div class="card mt-2 shadow rounded-3">
                                     <div class="row align-items-center">
                                     <div class="col text-center">
@@ -90,7 +98,7 @@
                     </div>
 
                     <div class="container">
-                        <div class="card-body mt-10" style="margin-top: 10px; width:70%; margin:auto">
+                        <div class="card-body mt-10" style="margin-top: 10px; width:80%; margin:auto">
                             <div class="card shadow rounded-3">
                                 <div class="row align-items-center">
                                 <div class="col text-center">
@@ -128,7 +136,7 @@
                     </div>
                     
                     <div class="container">
-                        <div class="card-body justify-content-center" style="margin-top: 10px; width:70%; margin:auto">
+                        <div class="card-body justify-content-center" style="margin-top: 10px; width:80%; margin:auto">
                             <div class="card mb-4 shadow rounded-3">
                                 <div class="row align-items-center">
                                 <div class="col text-center">
