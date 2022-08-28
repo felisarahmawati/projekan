@@ -15,6 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -68,6 +69,7 @@
                 </div>
                 <div class="sub-menu">
                     <div class="drop-box">
+                        <a href="{{ route('/layanan') }}">Kategori</a>
                         <a href="/admin/layanan-kategori/showsubkategori">SubKategori</a>
                     </div>
                 </div>
@@ -82,7 +84,7 @@
                 </div>
                 <div class="sub-menu">
                     <div class="drop-box">
-                        <a href="/admin/data/order">Order</a>
+                        <a href="/order/kendaraan">Order</a>
                         <a href="/admin/data/payment">Payment</a>
                         <a href="/admin/data/pengaturan-user">Pengaturan User</a>
                     </div>
