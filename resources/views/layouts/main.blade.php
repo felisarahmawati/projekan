@@ -131,6 +131,36 @@
 
 <!-- Template Main JS File -->
 <script src="../../../assets/js/main.js"></script>
+<link href="../../../assets/css/bebas.css" rel="stylesheet">
+
+<script>
+    const plus = document.querySelector(".plus"),
+      minus = document.querySelector(".minus"),
+      num = document.querySelector(".num");
+
+      let a = 1;
+
+      plus.addEventListener("click", ()=>{
+        a++;
+        a = (a < 10) ? "0" + a : a;
+        num.innerText = a;
+        console.log(a);
+      });
+
+      minus.addEventListener("click", ()=>{
+        if(a > 1){
+          a--;
+          a = (a < 10) ? "0" + a : a;
+          num.innerText = a;
+        }
+        else {
+          a = 0;
+          num.innerText = a;
+          alert("Anda yakin menghapus layanan ini ?");
+        }
+      });
+  </script>
+  <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 </body>
 </html>
