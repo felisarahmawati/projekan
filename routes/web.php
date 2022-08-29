@@ -395,7 +395,11 @@ Route::get('vendor/tarikdana', function () {
         "title" =>"tarikdana"
     ]);
 });
-
+Route::get('vendor/rekening', function () {
+    return view('vendor/rekening', [
+        "title" =>"tarikdana"
+    ]);
+});
 Route::get('Vendor/Kelola-Kendaraan/layanan_step1', function () {
     return view('Vendor/Kelola-Kendaraan//layanan_step1', [
         "title" =>"laynan_step1"
