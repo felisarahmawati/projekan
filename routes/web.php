@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HeroController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MapsController;
 use App\Http\Controllers\RoleController;
@@ -15,6 +15,10 @@ use App\Http\Controllers\LayananController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\OKendaraanController;
+use App\Http\Controllers\OBarangController;
+use App\Http\Controllers\OBangunanController;
+use App\Http\Controllers\OPickupController;
 use App\Http\Controllers\SuperadminController;
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +50,7 @@ Route::get('/admin/profile', [AdminController::class, 'profile'])->middleware('a
 Route::get('/admin/profile', [ProfileController::class, 'index'])->name('profile.index');
 Route::patch('/profile/{id}', [ProfileController::class, 'update'])->name('profile.update');
 
-Route::get('/admin/data/order', [AdminController::class, 'order'])->middleware('auth');
+// Route::get('/admin/data/order', [AdminController::class, 'order'])->middleware('auth');
 Route::get('/admin/data/order=barang', [AdminController::class, 'barang'])->middleware('auth');
 Route::get('/admin/home', [AdminController::class, 'home'])->middleware('auth');
 Route::get('/admin/data/order=bangunan', [AdminController::class, 'bangunan'])->middleware('auth');
@@ -760,4 +764,24 @@ Route::get('/finance/DataPenarikan/konfirmasi', [FinanceController::class, 'konf
 Route::get('/finance/DataPenarikan/history', [FinanceController::class, 'history'])->middleware('auth');
 Route::get('/finance/profilefinance', [FinanceController::class, 'profile'])->middleware('auth');
 
-Route::get('/category', [CategoryController::class, 'index'])->name('layanan.index');
+// Route::get('/category', [CategoryController::class, 'index'])->name('layanan.index');
+
+//Admin-data-order-kendaraan
+route::get('/order/kendaraan', [OKendaraanController::class, 'kendaraan'])->name('/okendaraan');
+
+//Admin-data-order-barang
+route::get('/order/barang', [OBarangController::class, 'barang'])->name('/obarang');
+
+//Admin-data-order-bangunan
+route::get('/order/bangunan', [OBangunanController::class, 'bangunan'])->name('/obangunan');
+
+//Admin-data-order-pickup
+route::get('/order/pickup', [OPickupController::class, 'pickup'])->name('/opickup');
+
+//Admin-Layanan-Kategori
+route::get('/layanan', [KategoriController::class, 'index'])->name('/layanan');
+route::post('/create', [KategoriController::class, 'post'])->name('/post');
+route::match(['get', 'post'], '/edit{id}', [KategoriController::class, 'edit']);
+route::get('/show{id}', [KategoriController::class, 'show']);
+route::get('/delete/kategori{id}', [KategoriController::class, 'delete']);
+
